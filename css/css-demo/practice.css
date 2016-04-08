@@ -12,3 +12,11 @@ section.job {
 .ul {
 	font-size: .8em;
 }
+
+#contact-info p:hover {
+	color: red;
+}
+
+.ul li {
+	font-style: italic;
+}
