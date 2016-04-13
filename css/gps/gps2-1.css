@@ -1,0 +1,28 @@
+header {
+  background-color: yellow;
+  border: 5px dashed green;
+  text-align: center;
+}
+
+.column-1 {
+  background-color: orange;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 40%;
+  padding: 4%;
+  text-align: right;
+}
+
+.column-2 {
+  background-color: red;
+  display: inline-block;
+  vertical-align: bottom;
+  max-width: 40%;
+  padding: 4%;
+  text-align: left;
+}
+
+footer {
+  background-color: blue;
+  text-align: center;
+}
