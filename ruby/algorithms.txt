@@ -34,3 +34,4 @@ Release 1- Algorithm for Making Coffee
 14. Turn machine off.
 15. Pour coffee from the coffee pot into a cup.
 16. Drink coffee.
+
