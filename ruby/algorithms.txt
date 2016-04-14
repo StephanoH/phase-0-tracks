@@ -1,0 +1,36 @@
+Release 0- Algorithm for Using and Elevator
+
+1. Approach elevator
+2. Compare destination floor to current floor. 
+3. If current floor > destination floor:
+	Press the "down" button.
+   If the current floor < destination floor:
+   	Press the "up" button.
+   If current floor = destination floor:
+   	Walk away from elevator.
+4. Once elevator door opens, enter.
+5. Scan up, then down on the list of floor buttons until the number "1" is seen.
+6. Starting at "1", move up the list of buttons until the desired floor number is seen.
+	If it is impossible to move up the list, then move down.
+7. Press the desired floor number once it is seen.
+8. Wait for elevator doors to close and the elevator to move up or down.
+9. When the elevator door opens, walk out of th elevator and continue on towards your destination.
+
+Release 1- Algorithm for Making Coffee
+
+1. Approach bag of coffee beans.
+2. Open bag.
+3. Open lid of coffee grinder.
+4. Pour 4 spoonfuls of coffee beans into the coffee grinder.
+5. Close grinder lid.
+6. Start a countdown timer for 15 seconds.
+7. Grind the coffee beans for the duration of the timer.
+8. Open grinder lid.
+9. Place coffee filter into coffee machine.
+10. Pour 1 liter water into coffee resevoir.
+11. Pour coffee grounds into the coffee filter.
+12. Turn the coffee machine on.
+13. Wait until coffee stops dripping.
+14. Turn machine off.
+15. Pour coffee from the coffee pot into a cup.
+16. Drink coffee.
