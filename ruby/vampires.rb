@@ -31,16 +31,19 @@ until Employee_number == 0
 		puts "Results inconclusive."
 	end
 
-	Employee_number = Employee_number - 1
-
-	def allergies(x)
-		puts "List any and all allergies you have. Type 'done' when you are done."
-		allergies = gets.chomp
-
-		if allergies == "sunshine"
-			puts "Probably a vampire."
-		elsif allergies == "done"
-			puts "Thanks for your input."
+	puts "List any and all allergies you have. Type 'done' when you are done."
+	allergies = gets.chomp
+	
+		until allergies == "done"
+			allergies = gets.chomp
+			
+			if allergies == "sunshine"
+				puts "Probably a vampire."
+				break
+			end
 		end
 
+	Employee_number -= 1
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
