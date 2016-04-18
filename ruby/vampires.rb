@@ -17,11 +17,13 @@ until Employee_number == 0
 	puts "Would you like to enroll in the company's health insurance?"
 		insurance_answer = gets.chomp
 
+
+
 	if age == 2016 - birthyear && garlic_bread_answer == "yes" && insurance_answer == "yes" && (name != "Drake Cula" && name != "Tu Fang")
 		puts "Probably not a vampire."
-	elsif age != 2016 - birthyear && (garlic_bread_answer == "no" || insurance_answer == "no") 
+	elsif age != (2016 - birthyear) && (garlic_bread_answer == "no" || insurance_answer == "no") 
 		puts "Probably a vampire."
-	elsif age != 2016 - birthyear && garlic_bread_answer == "no" && insurance_answer == "no"
+	elsif age != (2016 - birthyear) && garlic_bread_answer == "no" && insurance_answer == "no"
 		puts "Almost certainly a vampire."
 	elsif name == "Drake Cula" || name == "Tu Fang"
 		puts "Definitely a vampire."
@@ -30,5 +32,15 @@ until Employee_number == 0
 	end
 
 	Employee_number = Employee_number - 1
+
+	def allergies(x)
+		puts "List any and all allergies you have. Type 'done' when you are done."
+		allergies = gets.chomp
+
+		if allergies == "sunshine"
+			puts "Probably a vampire."
+		elsif allergies == "done"
+			puts "Thanks for your input."
+		end
 
 end
