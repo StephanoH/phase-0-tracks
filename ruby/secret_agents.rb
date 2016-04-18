@@ -42,18 +42,37 @@ def decrypt(password)
 	puts password
 end
 
+#Print question asking for modification type
+#Use loop to execute choice of methods based on user input
+#Modify methods to ask for password
+#Print results to screen and exits.
+
+puts "Would you like to encrypt or decrypt a password? (encrypt/decrypt)"
+answer = gets.chomp
+
+if answer == "encrypt"
+	puts "Password to be decrypted, please"
+	puts encrypt(gets.chomp)
+elsif answer == "decrypt"
+	puts "Password to be decrypted, please"
+	decrypt(gets.chomp)
+else
+	puts "Incompatible input: self-destruct initiated. Goodbye."
+end
+
+
 #Driver Code
 
 #Shifting letters, including edge cases
-puts encrypt("abc")
-puts encrypt("zed") 
+#puts encrypt("abc")
+#puts encrypt("zed") 
 
 #Shifting letters back, including edge cases
-decrypt("bcd")
-decrypt("afe")
+#decrypt("bcd")
+#decrypt("afe")
 
 #Nested Method Calling
 # the following works because the encrypt method applies its modifications to 
 # a string and saves it as a string. This string is then applied as the input
 # to the decrypt method, allowing it to carry out its function.
-decrypt(encrypt("swordfish"))
+#decrypt(encrypt("swordfish"))
