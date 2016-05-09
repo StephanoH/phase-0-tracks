@@ -52,8 +52,34 @@ function Matching_info(first_data, second_data) {
 	}
 }
 
+// Method to return a string of given length
+// 1. Call arguement of word length
+// 2. For that many times, do:
+//	push random letters from alphabet into array
+// 3. print the array
+// 4. feed array into LongestPhrase
+
+function String_generator(word_length) {
+	string_array = [];
+	alphabet = "abcdefghijklmnopqrstuvwxyz";
+	word = ""
+
+	for (var i = 0; i < word_length; i++) {
+		for (var i = 0; i < Math.floor(Math.random() * 10) + 1; i++) {
+			word += "a";
+		}
+	string_array.push(word);
+	console.log(string_array);
+	}
+}
 
 // Driver Code
-var test = new LongestPhrase(["a", "ab", "abc", "abcd"])
-var test_match = new Matching_info({name: "Steven", age: 54}, {name: "Steven", age: 24})
-var test_match_false = new Matching_info({name: "Andrew", age: 13}, {name: "Amanda", age: 1423})
+var test = new LongestPhrase(["a", "ab", "abc", "abcd"]);
+var test_match = new Matching_info({name: "Steven", age: 54}, {name: "Steven", age: 24});
+var test_match_false = new Matching_info({name: "Andrew", age: 13}, {name: "Amanda", age: 1423});
+
+for (var i = 0; i < 10; i++) {
+	var test_string = new String_generator(3);
+	var test_everything = new LongestPhrase(test_string.string_array)	
+}
+
