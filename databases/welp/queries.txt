@@ -1,0 +1,35 @@
+input:
+	SELECT * FROM reviews 
+	JOIN businesses ON  reviews.business_id = businesses.id
+	JOIN users ON reviews.user_id = users.id;
+output:
+		1|5|Was satisfying to climb|1|1|1|GH Rock Gym|1|Soloman|Grundy
+		2|2|Was just ok. Nothing Great|2|2|2|Beanz Coffee Bar|2|Adam|Smith
+		3|4|Had a great time, minor flaws in table setup, though|3|3|3|Hopz Beer Bar|3|Samantha|Morrigan
+		4|5|Food was terrific. 'Nuff said.|4|4|4|Foodie Foods|4|Mario|Kim
+		5|1|Didn't even consult me.|5|5|5|Atlantic Consulting|5|Amanda|Huggenkiss
+input:
+	SELECT 
+	users.first_name,
+	users.last_name,
+	businesses.business_name,
+	reviews.stars,
+	reviews.comment
+	FROM
+	reviews
+	LEFT JOIN businesses ON reviews.business_id = businesses.id
+	LEFT JOIN users ON reviews.user_id = users.id;
+output:
+	Soloman|Grundy|GH Rock Gym|5|Was satisfying to climb
+	Adam|Smith|Beanz Coffee Bar|2|Was just ok. Nothing Great
+	Samantha|Morrigan|Hopz Beer Bar|4|Had a great time, minor flaws in table setup, though
+	Mario|Kim|Foodie Foods|5|Food was terrific. 'Nuff said.
+	Amanda|Huggenkiss|Atlantic Consulting|1|Didn't even consult me.
+
+input:
+	SELECT * FROM reviews 
+	JOIN businesses ON  reviews.business_id = businesses.id
+	JOIN users ON reviews.user_id = users.id
+	WHERE businesses.business_name = "Beanz Coffee Bar";
+output:
+	2|2|Was just ok. Nothing Great|2|2|2|Beanz Coffee Bar|2|Adam|Smith
