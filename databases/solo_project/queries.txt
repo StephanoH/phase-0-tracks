@@ -1,0 +1,47 @@
+input: 
+	SELECT * FROM cars;
+output: 
+	1|Mustang|coupe|1
+	2|Camaro|coupe|2
+	3|Explorer|SUV|1
+	4|Optima|sedan|3
+input: 
+	UPDATE cars SET body_type="sports_sedan" WHERE model="Optima";
+output: (none)
+input: 
+	SELECT * FROM cars, make WHERE cars.make_id = make.id;
+output:
+	1|Mustang|coupe|1|1|Ford|America|1903
+	2|Camaro|coupe|2|2|Chevrolet|America|1911
+	3|Explorer|SUV|1|1|Ford|America|1903
+	4|Optima|sports_sedan|3|3|Kia|Korea|1945
+input: 
+	SELECT cars.model, make.company FROM cars JOIN make ON cars.make_id = make.id;
+output:
+	Mustang|Ford
+	Camaro|Chevrolet
+	Explorer|Ford
+	Optima|Kia
+input:
+	DELETE FROM make WHERE company="Kia";
+output: (none)
+input:
+	SELECT * from cars
+	INNER JOIN make ON cars.make_id = make.id;
+output:
+	1|Mustang|coupe|1|1|Ford|America|1903
+	2|Camaro|coupe|2|2|Chevrolet|America|1911
+	3|Explorer|SUV|1|1|Ford|America|1903
+input: 
+	SELECT cars.model FROM cars
+	RIGHT JOIN make ON cars.make_id = make.id;
+output:
+	RIGHT and FULL OUTER JOINs are not currently supported
+input: 
+	SELECT cars.model FROM cars
+	LEFT JOIN make ON cars.make_id = make.id;
+output: 
+	Mustang
+	Camaro
+	Explorer
+	Optima
